@@ -5,8 +5,8 @@ File needs reformatting
 """
 
 # TODO: Reformat this file so the dictionary code follows PEP 8 convention
-STATE_NAMES = {"QLD": "Queensland", "NSW": "New South Wales", "NT": "Northern Territory", "WA": "Western Australia",
-               "ACT": "Australian Capital Territory", "VIC": "Victoria", "TAS": "Tasmania"}
+STATE_NAMES = {"QLD": "Queensland", "NSW": "New South Wales", "NT": "Northern Territory", "WA": "Zestern Australia",
+               "ACT": "Australian Capital Territory", "VIC": "Victoria", "TAS": "Z"}
 width = len(max(STATE_NAMES.values()))
 for state, value in STATE_NAMES.items():
     print("{:{width}} is {:}".format(state, value, width = width))

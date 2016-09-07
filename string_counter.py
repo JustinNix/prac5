@@ -1,13 +1,14 @@
 def main():
-    WORDS_IN_A_STRING = {}
+    word_counts = {}
     string = input("Please enter a phrase: ").split()
     for word in string:
-        if word not in WORDS_IN_A_STRING:
-            WORDS_IN_A_STRING[word] = 1
+        if word not in word_counts:
+            word_counts[word] = 1
         else:
-            WORDS_IN_A_STRING[word] +=1
-    width = len(max(WORDS_IN_A_STRING.keys()))
-    sorted(WORDS_IN_A_STRING.values()) # doesnt work
-    for word, count in WORDS_IN_A_STRING.items():
-        print("{:{width}} : {:>{width}}".format(word, count, width = width))
+            word_counts[word] +=1
+    words = sorted(word_counts.keys())
+    width = max((len(word) for word in words))
+    sorted(word_counts.values()) # doesnt work
+    for word in words:
+        print("{:{width}} : {:>{width}}".format(word, word_counts[word], width = width))
 main()
